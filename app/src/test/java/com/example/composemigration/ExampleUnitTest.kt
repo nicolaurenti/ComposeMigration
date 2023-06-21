@@ -1,4 +1,4 @@
-package com.example.poccomposemigration
+package com.example.composemigration
 
 import org.junit.Test
 
