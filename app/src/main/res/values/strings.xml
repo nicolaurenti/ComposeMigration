@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">POCComposeMigration</string>
     <string name="migration_to_compose">Migration to compose :)</string>
-    <string name="card_text">Texto de la tarjeta</string>
     <string name="this_is_a_button">This is a button</string>
+    <string name="this_is_a_title">This is a title</string>
 </resources>

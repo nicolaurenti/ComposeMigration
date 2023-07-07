@@ -2,25 +2,54 @@ package com.example.composemigration
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.composemigration.model.MigrationModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @HiltViewModel
 class MigrationViewModel @Inject constructor() : ViewModel() {
 
-    private val mutableState: MutableStateFlow<MigrationState> = MutableStateFlow(MigrationState.IDLE)
-    val state: StateFlow<MigrationState> = mutableState.asStateFlow()
+    private val mutableListState: MutableStateFlow<List<MigrationModel>> =
+        MutableStateFlow(listOf())
+    val listState: StateFlow<List<MigrationModel>> = mutableListState.asStateFlow()
 
     fun buttonClicked() = viewModelScope.launch {
-        mutableState.value = MigrationState.DOING_SOMETHING
+        mutableListState.value = testList
     }
-}
 
-enum class MigrationState {
-    IDLE,
-    DOING_SOMETHING,
+    private val testList = listOf(
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+        MigrationModel(),
+    )
 }
