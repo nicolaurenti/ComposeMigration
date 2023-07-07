@@ -26,7 +26,7 @@
             android:id="@+id/cardText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/card_text"
+            android:text="@string/migration_to_compose"
             android:textAlignment="center"
             android:textSize="18sp" />
 
